@@ -17,7 +17,7 @@ class LPSHGsim:
         self.n1 = 1.606  # refractive index of fundamental
         self.n2 = 1.606  # refractive index of second harmonic
         self.dk = (
-            2 * xp.pi * self.n1 / self.lam_fundamental
+            2 * 2 * xp.pi * self.n1 / self.lam_fundamental
             - 2 * xp.pi * self.n2 / (self.lam_fundamental / 2)
         ) # wavevector mismatch
 
