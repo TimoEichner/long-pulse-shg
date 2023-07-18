@@ -1,6 +1,4 @@
-#use_cuda = True
-
-try:# use_cuda:
+try:
     import cupy as xp
     USE_CUDA = True
     print('lpshg running on GPU')
