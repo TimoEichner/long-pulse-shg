@@ -46,15 +46,15 @@ class LPSHGsim:
         self.z = np.linspace(0, self.Z, self.Nz)
 
         self.dx = self.X / self.Nx
-        ax = xp.linspace(-self.X / 2, self.X / 2, self.Nx + 1)[:-1]
+        ax = xp.linspace(-self.Nx / 2, self.Nx / 2, self.Nx + 1)[:-1]
         fx = ax / self.X
 
         self.dy = self.Y / self.Ny
-        ay = xp.linspace(-self.Y / 2, self.Y / 2, self.Ny + 1)[:-1]
+        ay = xp.linspace(-self.Ny / 2, self.Ny / 2, self.Ny + 1)[:-1]
         fy = ay / self.Y
-
+        print(fy)
         self.FX, self.FY = xp.meshgrid(fx, fy)
-
+        
         self.dt = self.T / self.Nt
 
     def SHG_ode(self, _t, _y, n1, n2):
