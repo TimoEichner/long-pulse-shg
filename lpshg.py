@@ -52,7 +52,7 @@ class LPSHGsim:
         self.dy = self.Y / self.Ny
         ay = xp.linspace(-self.Ny / 2, self.Ny / 2, self.Ny + 1)[:-1]
         fy = ay / self.Y
-        print(fy)
+
         self.FX, self.FY = xp.meshgrid(fx, fy)
         
         self.dt = self.T / self.Nt
